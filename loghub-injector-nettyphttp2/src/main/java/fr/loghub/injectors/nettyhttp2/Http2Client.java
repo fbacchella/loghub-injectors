@@ -1,4 +1,4 @@
-package loghub.injectors.nettyhttp2;
+package fr.loghub.injectors.nettyhttp2;
 
 import java.net.URI;
 import java.nio.ByteBuffer;
