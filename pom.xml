@@ -270,6 +270,7 @@
         <module>loghub-injector-zmq</module>
         <module>loghub-jdbc</module>
         <module>loghub-serializer-simplecbor</module>
+        <module>loghub-serializer-msgpack</module>
     </modules>
     <profiles>
         <profile>
