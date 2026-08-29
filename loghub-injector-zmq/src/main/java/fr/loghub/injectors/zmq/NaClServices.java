@@ -1,4 +1,4 @@
-package fr.loghub.logservices.zmq;
+package fr.loghub.injectors.zmq;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;

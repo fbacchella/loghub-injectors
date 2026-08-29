@@ -1,4 +1,4 @@
-package fr.loghub.logservices.zmq;
+package fr.loghub.injectors.zmq;
 
 import java.nio.file.Files;
 import java.nio.file.Path;

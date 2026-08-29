@@ -1,4 +1,4 @@
-package fr.loghub.logservices.zmq;
+package fr.loghub.injectors.zmq;
 
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
