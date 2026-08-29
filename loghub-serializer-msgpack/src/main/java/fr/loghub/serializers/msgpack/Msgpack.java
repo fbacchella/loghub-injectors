@@ -3,8 +3,8 @@ package fr.loghub.serializers.msgpack;
 import java.io.IOException;
 import java.time.Instant;
 import java.time.ZonedDateTime;
+import java.util.Collection;
 import java.util.Date;
-import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
@@ -63,7 +63,7 @@ public class Msgpack {
                     pack(packer, e.getValue());
                 }
             }
-            case List<?> l -> {
+            case Collection<?> l -> {
                 packer.packArrayHeader(l.size());
                 for (Object v : l) {
                     pack(packer, v);

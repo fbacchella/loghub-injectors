@@ -7,6 +7,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
+import java.util.Set;
 
 import org.junit.jupiter.api.Test;
 
@@ -25,6 +26,7 @@ public class TestMsgpack {
         map.put("double", 3.14);
         map.put("bytes", new byte[]{1, 2, 3});
         map.put("list", List.of(1, 2, 3));
+        map.put("set", Set.of(1, 2, 3));
         map.put("map", Map.of("k", "v"));
         map.put("null", null);
         map.put("instant", Instant.now());
