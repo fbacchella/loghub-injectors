@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>fr.loghub</groupId>
+        <artifactId>loghub-injectors-pom</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>loghub-injector-zmq</artifactId>
+    <packaging>jar</packaging>
+
+    <name>loghub-injector-zmq</name>
+    <description>LogHub injector based on ZeroMQ (JeroMQ)</description>
+
+    <properties>
+        <jeromq.version>0.6.0</jeromq.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.zeromq</groupId>
+            <artifactId>jeromq</artifactId>
+            <version>${jeromq.version}</version>
+        </dependency>
+    </dependencies>
+</project>
