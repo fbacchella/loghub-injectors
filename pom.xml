@@ -269,6 +269,7 @@
         <module>loghub-injector-nettyphttp2</module>
         <module>loghub-injector-zmq</module>
         <module>loghub-jdbc</module>
+        <module>loghub-serializer-simplecbor</module>
     </modules>
     <profiles>
         <profile>
