@@ -266,7 +266,7 @@
     </reporting>
 
     <modules>
-
+        <module>loghub-injector-nettyphttp2</module>
     </modules>
     <profiles>
         <profile>
