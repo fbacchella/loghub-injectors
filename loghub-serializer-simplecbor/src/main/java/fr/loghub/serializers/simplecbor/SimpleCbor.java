@@ -2,10 +2,13 @@ package fr.loghub.serializers.simplecbor;
 
 import java.io.ByteArrayOutputStream;
 import java.time.Instant;
+import java.util.Arrays;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -87,6 +90,8 @@ public class SimpleCbor {
                 item.setTag(1);
                 yield item;
             }
+            case Throwable t ->
+                convert(resolveThrowable(t));
             case int[] a -> {
                 Array array = new Array();
                 for (int v : a) {
@@ -146,5 +151,17 @@ public class SimpleCbor {
             default ->
                 throw new IllegalArgumentException("Unhandled type " + o.getClass());
         };
+    }
+
+    private Map<String, Object> resolveThrowable(Throwable t) {
+        Map<String, Object> exception = new HashMap<>(4);
+        Optional.ofNullable(t.getMessage()).ifPresent(m -> exception.put("message", m));
+        exception.put("class", t.getClass().getName());
+        List<String> stack = Arrays.stream(t.getStackTrace()).map(StackTraceElement::toString).map(i -> i.replace("\t", "")).collect(Collectors.toList());
+        exception.put("stack", stack);
+        Optional.ofNullable(t.getCause())
+                .map(this::resolveThrowable)
+                .ifPresent(i -> exception.put("cause", i));
+        return exception;
     }
 }

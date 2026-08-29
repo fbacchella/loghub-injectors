@@ -38,6 +38,7 @@ public class TestSimpleCbor {
         map.put("object_array", new Object[]{"a", 1});
         map.put("byte", (byte) 1);
         map.put("char", 'z');
+        map.put("exception", new IllegalStateException("boom", new IllegalArgumentException("root cause")));
 
         Optional<byte[]> result = sc.serialize(map);
         assertTrue(result.isPresent());
