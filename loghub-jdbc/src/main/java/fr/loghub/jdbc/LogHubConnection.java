@@ -21,19 +21,23 @@ import java.util.Optional;
 import java.util.Properties;
 import java.util.concurrent.Executor;
 
+import fr.loghub.core.Factory;
+import fr.loghub.core.publishers.Publisher;
+import fr.loghub.core.serializers.Serializer;
+
 public class LogHubConnection implements Connection {
 
-    private final String url;
-    private final Properties info;
+    private final Publisher publisher;
+    private final Serializer serializer;
     private boolean closed = false;
 
-    public LogHubConnection(String url, Properties info) {
-        this.url = url;
-        this.info = info;
+    public LogHubConnection(Factory factory) {
+        this.publisher = factory.getPublisher();
+        this.serializer = factory.getSerializer();
     }
 
     public void publish(Map<String, Object> values) {
-        throw new UnsupportedOperationException("To be implemented");
+        serializer.serialize(values).ifPresent(publisher::send);
     }
 
     @Override

@@ -9,6 +9,8 @@ import java.sql.SQLFeatureNotSupportedException;
 import java.util.Properties;
 import java.util.logging.Logger;
 
+import fr.loghub.core.Factory;
+
 public class LogHubDriver implements Driver {
 
     static {
@@ -22,7 +24,7 @@ public class LogHubDriver implements Driver {
     @Override
     public Connection connect(String url, Properties info) throws SQLException {
         if (acceptsURL(url)) {
-            return new LogHubConnection(url, info);
+            return new LogHubConnection(new Factory());
         } else {
             return null;
         }
