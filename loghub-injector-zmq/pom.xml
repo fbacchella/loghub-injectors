@@ -13,7 +13,7 @@
     <artifactId>loghub-injector-zmq</artifactId>
     <packaging>jar</packaging>
 
-    <name>loghub-injector-zmq</name>
+    <name>LogHub injectors :: ZMQ</name>
     <description>LogHub injector based on ZeroMQ (JeroMQ)</description>
 
     <properties>
@@ -23,7 +23,7 @@
     <dependencies>
         <dependency>
             <groupId>fr.loghub</groupId>
-            <artifactId>loghub-core</artifactId>
+            <artifactId>loghub-injector-core</artifactId>
         </dependency>
         <dependency>
             <groupId>org.zeromq</groupId>

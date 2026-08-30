@@ -13,13 +13,13 @@
     <artifactId>loghub-serializer-msgpack</artifactId>
     <packaging>jar</packaging>
 
-    <name>loghub-serializer-msgpack</name>
+    <name>LogHub serializers :: MessagePack</name>
     <description>LogHub MessagePack serializer</description>
 
     <dependencies>
         <dependency>
             <groupId>fr.loghub</groupId>
-            <artifactId>loghub-core</artifactId>
+            <artifactId>loghub-injector-core</artifactId>
         </dependency>
         <dependency>
             <groupId>org.msgpack</groupId>

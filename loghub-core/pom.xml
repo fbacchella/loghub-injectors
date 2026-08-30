@@ -10,9 +10,9 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>loghub-core</artifactId>
+    <artifactId>loghub-injector-core</artifactId>
     <packaging>jar</packaging>
 
-    <name>loghub-core</name>
+    <name>LogHub injectors :: Core</name>
     <description>LogHub core module, shared by the other modules and holding common code</description>
 </project>

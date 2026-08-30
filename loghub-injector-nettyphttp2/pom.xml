@@ -13,7 +13,7 @@
     <artifactId>loghub-injector-nettyphttp2</artifactId>
     <packaging>jar</packaging>
 
-    <name>loghub-injector-nettyphttp2</name>
+    <name>LogHub injectors :: HTTP2 over Netty</name>
     <description>LogHub injector based on Netty HTTP/2</description>
 
     <properties>
@@ -35,7 +35,7 @@
     <dependencies>
         <dependency>
             <groupId>fr.loghub</groupId>
-            <artifactId>loghub-core</artifactId>
+            <artifactId>loghub-injector-core</artifactId>
         </dependency>
         <dependency>
             <groupId>io.netty</groupId>
