@@ -20,6 +20,11 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
+                <groupId>fr.loghub</groupId>
+                <artifactId>loghub-core</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>org.junit</groupId>
                 <artifactId>junit-bom</artifactId>
                 <version>${junit.version}</version>
@@ -50,6 +55,12 @@
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 
@@ -266,6 +277,7 @@
     </reporting>
 
     <modules>
+        <module>loghub-core</module>
         <module>loghub-injector-nettyphttp2</module>
         <module>loghub-injector-zmq</module>
         <module>loghub-jdbc</module>

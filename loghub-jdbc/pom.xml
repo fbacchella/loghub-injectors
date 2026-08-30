@@ -15,4 +15,11 @@
 
     <name>loghub-jdbc</name>
     <description>LogHub JDBC driver implementation (based on the JDK java.sql API)</description>
+
+    <dependencies>
+        <dependency>
+            <groupId>fr.loghub</groupId>
+            <artifactId>loghub-core</artifactId>
+        </dependency>
+    </dependencies>
 </project>

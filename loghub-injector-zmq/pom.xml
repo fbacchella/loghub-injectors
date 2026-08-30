@@ -22,6 +22,10 @@
 
     <dependencies>
         <dependency>
+            <groupId>fr.loghub</groupId>
+            <artifactId>loghub-core</artifactId>
+        </dependency>
+        <dependency>
             <groupId>org.zeromq</groupId>
             <artifactId>jeromq</artifactId>
             <version>${jeromq.version}</version>
