@@ -30,5 +30,10 @@
             <artifactId>jeromq</artifactId>
             <version>${jeromq.version}</version>
         </dependency>
+        <dependency>
+            <groupId>fr.loghub</groupId>
+            <artifactId>naclprovider</artifactId>
+            <version>1.0.0</version>
+        </dependency>
     </dependencies>
 </project>
