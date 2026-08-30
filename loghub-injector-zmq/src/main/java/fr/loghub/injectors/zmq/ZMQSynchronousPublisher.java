@@ -12,9 +12,13 @@ import org.zeromq.ZMQ;
 import com.neilalexander.jnacl.crypto.curve25519;
 import com.neilalexander.jnacl.crypto.curve25519xsalsa20poly1305;
 
+import fr.loghub.core.publishers.Publisher;
 import lombok.Getter;
 
-class SynchronousPublisher implements Publisher {
+public class ZMQSynchronousPublisher implements Publisher {
+
+    public String PROPERTY_PRIVATEKEYFILE = "fr.loghub.logging.zmq.curve.privateKeyFile";
+    public String PROPERTY_AUTOCREATE = "fr.loghub.logging.zmq.curve.autoCreate";
 
     private ZMQ.Socket socket;
     private final ZContext ctx;
@@ -24,7 +28,7 @@ class SynchronousPublisher implements Publisher {
     private final Logger logger;
     private final Runnable curveConfigurator;
 
-    SynchronousPublisher(Logger logger, ZMQConfiguration<?> config) {
+    ZMQSynchronousPublisher(Logger logger, ZMQConfiguration<?> config) {
         ctx = new ZContext(1);
         ctx.setLinger(config.linger);
         this.config = config;
